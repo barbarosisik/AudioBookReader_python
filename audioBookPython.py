@@ -2,11 +2,12 @@ import pyttsx3
 import PyPDF2
 from tkinter.filedialog import *
 
+print("Choose the pdf file that you want to listen")
+
 # Opening the pdf file-book
 book = askopenfilename()
 pdfReader = PyPDF2.PdfFileReader(book)
 pages = pdfReader.numPages
-print(pages)
 
 for num in range(0, pages):
     page = pdfReader.getPage(num)
